@@ -4,7 +4,7 @@
 Interaktivní vzdělávací webová hra v čistém **HTML, CSS a JavaScriptu**, která pomáhá začátečníkům pochopit základy programování v jazyce Python a propojuje rychlé procvičování s výukovými materiály na **W3Schools**.
 
 ## Odkazy na odevzdání
-* **Repozitář na GitHubu:** 
+* **Repozitář na GitHubu:** https://github.com/SoskinYoung/EduGame/blob/main/README.md
 * **Live hra (GitHub Pages):** https://soskinyoung.github.io/EduGame/
 
 ---
