@@ -5,7 +5,7 @@ Interaktivní vzdělávací webová hra v čistém **HTML, CSS a JavaScriptu**, 
 
 ## Odkazy na odevzdání
 * **Repozitář na GitHubu:** 
-* **Live hra (GitHub Pages):** 
+* **Live hra (GitHub Pages):** https://soskinyoung.github.io/EduGame/
 
 ---
 
