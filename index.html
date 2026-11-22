@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyQuest – Nauč se Python hrou</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. ÚVODNÍ OBRAZOVKA -->
+        <section id="start-screen" class="screen active">
+            <h1>🐍 PyQuest</h1>
+            <p class="subtitle">Oprav chyby, doplň kód a staň se mistrem Pythonu!</p>
+            
+            <div class="rules-box">
+                <h3>Jak to funguje:</h3>
+                <ul>
+                    <li>❤️ Máš <strong>3 životy</strong>.</li>
+                    <li>🎯 Řešíš úkoly z proměnných, podmínek a cyklů.</li>
+                    <li>📊 Na konci uvidíš, co už umíš a co dopilovat na W3Schools.</li>
+                </ul>
+            </div>
+
+            <button id="start-btn" class="btn primary-btn">Spustit trénink</button>
+        </section>
+
+        <!-- 2. HERNÍ OBRAZOVKA -->
+        <section id="game-screen" class="screen">
+            <header class="hud">
+                <div class="hud-item">Úkol: <span id="question-counter">1 / 6</span></div>
+                <div class="hud-item">Skóre: <span id="score">0</span></div>
+                <div class="hud-item">Životy: <span id="lives">❤️❤️❤️</span></div>
+            </header>
+
+            <div class="topic-badge" id="topic-badge">Téma: Proměnné</div>
+            <h2 id="question-text">Jaký bude výstup tohoto kódu?</h2>
+
+            <!-- Blok pro zobrazení Python kódu -->
+            <pre class="code-block"><code id="code-display">x = 5
+y = "3"
+print(x + int(y))</code></pre>
+
+            <!-- Tlačítka pro odpovědi (vygeneruje je JS) -->
+            <div id="options-container" class="options-grid"></div>
+
+            <!-- Okamžitá zpětná vazba po kliknutí -->
+            <div id="feedback-box" class="feedback hidden">
+                <p id="feedback-text"></p>
+                <button id="next-btn" class="btn secondary-btn">Další úkol ➡️</button>
+            </div>
+        </section>
+
+        <!-- 3. OBRAZOVKA VÝSLEDKŮ (Měřitelnost pokroku) -->
+        <section id="result-screen" class="screen">
+            <h1>Výsledky tréninku</h1>
+            <div class="rank-box">
+                <p>Tvoje úroveň:</p>
+                <h2 id="final-rank">Junior Pythonista</h2>
+                <p>Celkové skóre: <strong id="final-score">0</strong> bodů</p>
+            </div>
+
+            <h3>📊 Přehled tvých znalostí:</h3>
+            <div id="stats-container" class="stats-list">
+                <!-- Zde JS vykreslí úspěšnost po tématech + odkazy na W3Schools -->
+            </div>
+
+            <button id="restart-btn" class="btn primary-btn">Hrát znovu 🔄</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Přepínání obrazovek */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+    animation: fadeIn 0.25s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+h2 {
+    font-size: 1.35rem;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    color: #e2e8f0;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-bottom: 22px;
+    font-size: 1.05rem;
+}
+
+/* Pravidla na úvodní obrazovce */
+.rules-box {
+    background-color: #0f172a;
+    border-left: 4px solid #04aa6d; /* zelená inspirovaná W3Schools */
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.rules-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Horní lišta ve hře */
+.hud {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #0f172a;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.topic-badge {
+    display: inline-block;
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Blok kódu v Pythonu */
+.code-block {
+    background-color: #090d16;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #a7f3d0;
+}
+
+/* Tlačítka odpovědí */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 560px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.option-btn {
+    background-color: #334155;
+    color: #f8fafc;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 0.98rem;
+    font-family: 'Consolas', 'Courier New', monospace;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #475569;
+    border-color: #38bdf8;
+}
+
+.option-btn.correct {
+    background-color: rgba(4, 170, 109, 0.25);
+    border-color: #04aa6d;
+    color: #6ee7b7;
+}
+
+.option-btn.wrong {
+    background-color: rgba(239, 68, 68, 0.25);
+    border-color: #ef4444;
+    color: #fca5a5;
+}
+
+/* Zpětná vazba */
+.feedback {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 10px;
+}
+
+.feedback.hidden {
+    display: none;
+}
+
+.feedback p {
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+/* Hlavní akční tlačítka */
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.12s ease, opacity 0.15s ease;
+}
+
+.btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.primary-btn {
+    background-color: #04aa6d;
+    color: #ffffff;
+}
+
+.secondary-btn {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+/* Výsledky a statistiky pokroku */
+.rank-box {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #334155;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #04aa6d;
+    transition: width 0.4s ease;
+}
+
+.stat-card a {
+    color: #38bdf8;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.stat-card a:hover {
+    text-decoration: underline;
+}
